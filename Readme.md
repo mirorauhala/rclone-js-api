@@ -1,4 +1,4 @@
-# JavaScript api for rclone rc
+# rclone rc api for TypeScript/JavaScript
 
 This is a javascript api to access the [rclone rc](https://rclone.org/rc) api.
 

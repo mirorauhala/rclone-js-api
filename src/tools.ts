@@ -4,8 +4,8 @@
  * @param remoteName {string} Name of the remote to check for.
  * @returns {boolean}
  */
-export function isLocalRemoteName(remoteName) {
-	return (remoteName && remoteName !== "" && remoteName[0] === "/");
+export function isLocalRemoteName(name: string) {
+  return name && name !== "" && name[0] === "/";
 }
 
 /**
@@ -15,12 +15,8 @@ export function isLocalRemoteName(remoteName) {
  * @param name
  * @returns {string}
  */
-export function addColonAtLast(name) {
-	if (name.indexOf(':') === -1) {
-		if (name[name.length - 1] !== ":") {
-			name = name + ":"
-		}
-	}
-
-	return name;
+export function addColonAtLast(name: string): string {
+  if (name.indexOf(":") > -1) return name;
+  if (name[name.length - 1] === ":") return name;
+  return `${name}:`;
 }
